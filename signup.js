@@ -1,4 +1,4 @@
 document.getElementById("login-id").onclick = function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
     window.location.href = "login.html";
 };

@@ -40,10 +40,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li>Fruit 1</li>
-            <li>Fruit 2</li>
-            <li>Fruit 3</li>
-            <li>Fruit 4</li>
+            <li id="fruit1">Fruit 1</li>
+            <li id="fruit2">Fruit 2</li>
+            <li id="fruit3">Fruit 3</li>
+            <li id="fruit4">Fruit 4</li>
         </ul>
     </li>
         <li><span>Vegetables </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -52,10 +52,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li>Vegetable - 1</li>
-            <li>Vegetable - 2</li>
-            <li>Vegetable - 3</li>
-            <li>Vegetable - 4</li>
+            <li id="vegetable1">Vegetable - 1</li>
+            <li id="vegetable2">Vegetable - 2</li>
+            <li id="vegetable3">Vegetable - 3</li>
+            <li id="vegetable4">Vegetable - 4</li>
         </ul>
     </li>
         <li><span>Personal Care</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -64,10 +64,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li>Personal Care 1</li>
-            <li>Personal Care 2</li>
-            <li>Personal Care 3</li>
-            <li>Personal Care 4</li>
+            <li id="personal_care1">Personal Care 1</li>
+            <li id="personal_care2">Personal Care 2</li>
+            <li id="personal_care3">Personal Care 3</li>
+            <li id="personal_care4">Personal Care 4</li>
         </ul>
     </li>
         <li><span>Beverages</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -76,10 +76,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li>Beverages 1</li>
-            <li>Beverages 2</li>
-            <li>Beverages 3</li>
-            <li>Beverages 4</li>
+            <li id="beverage1">Beverages 1</li>
+            <li id="beverage2">Beverages 2</li>
+            <li id="beverage3">Beverages 3</li>
+            <li id="beverage4">Beverages 4</li>
         </ul>
     </li>
         <li>Bakery Products <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -88,10 +88,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li>Bakery Products 1</li>
-            <li>Bakery Products 2</li>
-            <li>Bakery Products 3</li>
-            <li>Bakery Products 4</li>
+            <li id="bakery1">Bakery Products 1</li>
+            <li id="bakery2">Bakery Products 2</li>
+            <li id="bakery3">Bakery Products 3</li>
+            <li id="bakery4">Bakery Products 4</li>
         </ul>
     </li>
     </ul>
@@ -100,7 +100,28 @@
 
 <div class="box">
     <span class="box-text" id="static-text" >Buy </span>&nbsp;<span class="box-text" id="dynamic-text"></span>
+   
 
+</div>
+<div class="slider-box">
+
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img src="https://images.unsplash.com/photo-1526250000311-b8f091ec8cac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D" alt="slide1" id="slide1">
+                
+                <img src="https://images.unsplash.com/photo-1590779032260-5623d6774f7a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide2" id="slide2">
+                
+                <img src="https://images.unsplash.com/photo-1642505171466-522d3e8ee3fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHNraW4lMjBjYXJlJTIwcHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="slide3" id="slide3">
+
+                <img src="https://images.unsplash.com/photo-1657310217253-176cd053e07e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGJldmVyYWdlfGVufDB8fDB8fHww" alt="slide4" id="slide4">
+
+                <img src="https://images.unsplash.com/photo-1612539466296-4ecf1db303e3?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide5" id="slide5">
+            </div>
+            <button class="slider-button left-button">&#10094;</button>
+            <button class="slider-button right-button">&#10095;</button>
+        </div>
+    </section>
 </div>
 
    
@@ -163,11 +184,33 @@
     </div>
     <div class="footer-copyright">
         <ul class="footer-text">
-            <li>&COPY; copyright SayHariOm. All Rights Reserved</li>
+            <li>&COPY; Copyright SayHariOm. All Rights Reserved</li>
         </ul>
     </div>
     </footer>
     
-    <script src="script.js"></script>    
+    <script src="script.js"></script>   
+    <script src="products/fruits/fruit1.js"></script> 
+    <script src="products/fruits/fruit2.js"></script>  
+    <script src="products/fruits/fruit3.js"></script>
+    <script src="products/fruits/fruit4.js"></script> 
+    <script src="products/vegetables/vegetable1.js"></script>
+    <script src="products/vegetables/vegetable2.js"></script>
+    <script src="products/vegetables/vegetable3.js"></script>
+    <script src="products/vegetables/vegetable4.js"></script>
+    <script src="products/personal_care/personal_care1.js"></script>
+    <script src="products/personal_care/personal_care2.js"></script>
+    <script src="products/personal_care/personal_care3.js"></script>
+    <script src="products/personal_care/personal_care4.js"></script>
+    <script src="products/beverages/beverage1.js"></script>
+    <script src="products/beverages/beverage2.js"></script>
+    <script src="products/beverages/beverage3.js"></script>
+    <script src="products/beverages/beverage4.js"></script>
+    <script src="products/bakery/bakery1.js"></script>
+    <script src="products/bakery/bakery2.js"></script>
+    <script src="products/bakery/bakery3.js"></script>
+    <script src="products/bakery/bakery4.js"></script>    
+
 </body>
 </html>
+

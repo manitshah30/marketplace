@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    position: relative;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .expand-box {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    background-color: #28a745;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 0; /* Ensure no padding before hover */
+    visibility: hidden; /* Hide the box initially */
+  }
+  
+  .box:hover .expand-box {
+    width: 200px; /* Width of the expanded box */
+    padding-left: 10px; /* Add padding on hover */
+    visibility: visible; /* Make the box visible on hover */
+    /* transition: transform 5s ease-out; */
+    
+  }
+  
+  .box#box1:hover ~ .box,
+  .box#box2:hover ~ .box#box3 {
+    transform: translateX(210px); /* Shift the other boxes to the right */
+  }
+  
+  
