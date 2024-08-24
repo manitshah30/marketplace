@@ -9,24 +9,36 @@
 <body>
     <div class="box">
         <img src="assets/images/signimg.jpg" alt="signbg">
-        <form class="sign-form" action="get">
-        
-        <!-- <label for="email">Email</label> -->
-        <input class="sign-text" type="email" placeholder="Enter email" name="email" required id="email" name="email">
+       <!-- toogle code -->
+        <div class="wrapper">
+                <div class="card-switch">
+                    <label class="switch">
+                       <input type="checkbox" class="toggle">
+                       <span class="slider"></span>
+                       <span class="card-side"></span>
+                       <div class="flip-card__inner">
+                          <div class="flip-card__front">
+                             <div class="title">LogIn</div>
+                             <form class="flip-card__form" action="">
+                                <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                                <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                                <button class="flip-card__btn">Let`s go!</button>
+                             </form>
+                          </div>
+                          <div class="flip-card__back">
+                             <div class="title">SignUp</div>
+                             <form class="flip-card__form" action="">
+                                <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                                <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                                <button class="flip-card__btn">Confirm!</button>
+                             </form>
+                          </div>
+                       </div>
+                    </label>
+                </div>   
+           </div> 
     
-        <br>
-    
-        <!-- <label for="password">Password</label> -->
-        <input class="sign-text" type="password" placeholder="Enter password" required id="password" name="password" >
-        <br>
-    
-        <div class="box-btn">
-
-            
-            <button class="sign-btn login-btn" id="login-id">Login </button>
-            <button class="sign-btn create-account-btn">Create account</button>    
-        </div>
-    </form></div>
+    </div>
     <footer>
     
         <div class="sign-copy">
