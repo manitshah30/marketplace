@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4d4; /* Matching the background color from the image */
+    color: #5c442e; /* Matching the text color from the image */
+}
+
+.accordion {
+    width: 600px;
+    border: 1px solid #5c442e; /* Matching the border color from the image */
+    border-radius: 5px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f4d4; /* Matching the header background color from the image */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.accordion-title {
+    font-size: 18px;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #fdf7e2; /* Lighter shade for content background */
+    border-top: 1px solid #5c442e;
+}
+
+.accordion-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.accordion-content table, th, td {
+    border: 1px solid #e0d5b0; /* Light border color */
+}
+
+.accordion-content th, td {
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.accordion-content th {
+    background-color: #f9f4d4; /* Matching the header background color */
+}
+.plane{
+height: 10px;
+width: 10px;
+}
+
+.svg-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    width: 100%;
+}
+
+.cell {
+    text-align: center;
+}
+
+svg {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
