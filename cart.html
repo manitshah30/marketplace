@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <ul class="bar">
+        <li><img class="logo" src="assets/images/logoo.jpg" alt="logo"></li>
+        <li><div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                </g>
+            </svg>
+            <input placeholder="Search" type="search" class="input">
+        </div>
+    </li>
+        <li>
+            <button>
+              Sign up
+              <div class="arrow-wrapper">
+                <div class="arrow"></div>
+              </div>
+            </button>
+            </li>
+        <li>
+            <div class="button-container">
+                
+          
+                <button class="cart-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="black" class="icon">
+                    <circle r="1" cy="21" cx="9"></circle>
+                    <circle r="1" cy="21" cx="20"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                </button>
+              </div></li>
+        </ul>
+    </nav>
+    <div class="shopping-cart">
+        <h1 class="title">Shopping Bag</h1>
+
+        <!-- Product #1 -->
+        <div class="item" data-price="549">
+            <div class="buttons">
+                <button class="delete-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff6347" width="24" height="24"><path d="M3 6l3 18h12l3-18h-18zm19-4h-5.5l-1-2h-8l-1 2h-5.5v2h21v-2zm-6.62 18l-.95-12h-5.85l-.95 12h7.75z"/></svg>
+                </button>
+                <button class="like-btn">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d3d3d3" width="24" height="24"><path d="M12 21.35l-1.45-1.32c-5.35-4.88-8.85-8.05-8.85-11.53 0-3.03 2.42-5.5 5.45-5.5 2.27 0 4.22 1.45 5.12 3.54 0.9-2.09 2.85-3.54 5.12-3.54 3.03 0 5.45 2.47 5.45 5.5 0 3.48-3.5 6.65-8.85 11.53l-1.45 1.32z"/></svg>
+                </button>
+            </div>
+
+            <div class="image">
+                <img src="assets/images/bk1.jpg" alt="Product Image">
+            </div>
+
+            <div class="description">
+                <span>Lorem.</span>
+                <span>Lorem, ipsum.</span>
+                <span>Lorem.</span>
+            </div>
+
+            <div class="quantity">
+                <button class="minus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13H5v-2h14v2z"/></svg>
+                </button>
+                <input type="number" value="1" min="1">
+                <button class="plus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/></svg>
+                </button>
+            </div>
+
+            <div class="total-price">$549.00</div>
+        </div>
+
+        <!-- Product #2 -->
+        <div class="item" data-price="870">
+            <div class="buttons">
+                <button class="delete-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff6347" width="24" height="24"><path d="M3 6l3 18h12l3-18h-18zm19-4h-5.5l-1-2h-8l-1 2h-5.5v2h21v-2zm-6.62 18l-.95-12h-5.85l-.95 12h7.75z"/></svg>
+                </button>
+                <button class="like-btn">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d3d3d3" width="24" height="24"><path d="M12 21.35l-1.45-1.32c-5.35-4.88-8.85-8.05-8.85-11.53 0-3.03 2.42-5.5 5.45-5.5 2.27 0 4.22 1.45 5.12 3.54 0.9-2.09 2.85-3.54 5.12-3.54 3.03 0 5.45 2.47 5.45 5.5 0 3.48-3.5 6.65-8.85 11.53l-1.45 1.32z"/></svg>
+                </button>
+            </div>
+
+            <div class="image">
+                <img src="assets/images/bvMain1.jpg" alt="Product Image">
+            </div>
+
+            <div class="description">
+              <span>Lorem.</span>
+              <span>Lorem, ipsum.</span>
+              <span>Lorem.</span>
+            </div>
+
+            <div class="quantity">
+                <button class="minus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13H5v-2h14v2z"/></svg>
+                </button>
+                <input type="number" value="1" min="1">
+                <button class="plus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/></svg>
+                </button>
+            </div>
+
+            <div class="total-price">$870.00</div>
+        </div>
+
+        <!-- Product #3 -->
+        <div class="item" data-price="185">
+            <div class="buttons">
+                <button class="delete-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff6347" width="24" height="24"><path d="M3 6l3 18h12l3-18h-18zm19-4h-5.5l-1-2h-8l-1 2h-5.5v2h21v-2zm-6.62 18l-.95-12h-5.85l-.95 12h7.75z"/></svg>
+                </button>
+                <button class="like-btn">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d3d3d3" width="24" height="24"><path d="M12 21.35l-1.45-1.32c-5.35-4.88-8.85-8.05-8.85-11.53 0-3.03 2.42-5.5 5.45-5.5 2.27 0 4.22 1.45 5.12 3.54 0.9-2.09 2.85-3.54 5.12-3.54 3.03 0 5.45 2.47 5.45 5.5 0 3.48-3.5 6.65-8.85 11.53l-1.45 1.32z"/></svg>
+                </button>
+            </div>
+
+            <div class="image">
+                <img src="assets/images/fruitMain1.jpg" alt="Product Image">
+            </div>
+
+            <div class="description">
+              <span>Lorem.</span>
+              <span>Lorem, ipsum.</span>
+              <span>Lorem.</span>
+            </div>
+
+            <div class="quantity">
+                <button class="minus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13H5v-2h14v2z"/></svg>
+                </button>
+                <input type="number" value="1" min="1">
+                <button class="plus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/></svg>
+                </button>
+            </div>
+
+            <div class="total-price">$185.00</div>
+        </div>
+
+        <!-- Product #4 -->
+        <div class="item" data-price="300">
+            <div class="buttons">
+                <button class="delete-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff6347" width="24" height="24"><path d="M3 6l3 18h12l3-18h-18zm19-4h-5.5l-1-2h-8l-1 2h-5.5v2h21v-2zm-6.62 18l-.95-12h-5.85l-.95 12h7.75z"/></svg>
+                </button>
+                <button class="like-btn">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d3d3d3" width="24" height="24"><path d="M12 21.35l-1.45-1.32c-5.35-4.88-8.85-8.05-8.85-11.53 0-3.03 2.42-5.5 5.45-5.5 2.27 0 4.22 1.45 5.12 3.54 0.9-2.09 2.85-3.54 5.12-3.54 3.03 0 5.45 2.47 5.45 5.5 0 3.48-3.5 6.65-8.85 11.53l-1.45 1.32z"/></svg>
+                </button>
+            </div>
+
+            <div class="image">
+                <img src="assets/images/pc1.jpg" alt="Product Image">
+            </div>
+
+            <div class="description">
+              <span>Lorem.</span>
+              <span>Lorem, ipsum.</span>
+              <span>Lorem.</span>
+            </div>
+
+            <div class="quantity">
+                <button class="minus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13H5v-2h14v2z"/></svg>
+                </button>
+                <input type="number" value="1" min="1">
+                <button class="plus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333" width="24" height="24"><path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/></svg>
+                </button>
+            </div>
+
+            <div class="total-price">$300.00</div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <p>Subtotal: $0.00</p>
+            <p>Shipping: $5.00</p>
+            <p>Total: $5.00</p>
+        </div>
+
+        <!-- Checkout Button -->
+        <div class="checkout">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+   
+    
+        <div class="about">
+            <div>About Us</div>
+            <div>Terms of Service</div>
+            <div>Contact</div>
+            <div>Privacy Policy</div>
+            <div>Terms and Conditions</div>
+            <div>Refund Policy</div>
+        </div>
+        
+        <div class="foot">
+            <ul class="social-media">
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                    
+                    <a href="#">
+                     
+                    </a>
+                </li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                    <path d="M2.50012 12C2.50012 7.52166 2.50012 5.28249 3.89136 3.89124C5.28261 2.5 7.52178 2.5 12.0001 2.5C16.4785 2.5 18.7176 2.5 20.1089 3.89124C21.5001 5.28249 21.5001 7.52166 21.5001 12C21.5001 16.4783 21.5001 18.7175 20.1089 20.1088C18.7176 21.5 16.4785 21.5 12.0001 21.5C7.52178 21.5 5.28261 21.5 3.89136 20.1088C2.50012 18.7175 2.50012 16.4783 2.50012 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.00012 17L11.1937 12.8065M17.0001 7L12.8066 11.1935M12.8066 11.1935L9.7779 7H7.00012L11.1937 12.8065M12.8066 11.1935L17.0001 17H14.2223L11.1937 12.8065" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                    
+                    <a href="#">
+                        
+                    </a>
+                </li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                    <path d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                    
+                    <a href="#">
+                       
+                    </a>
+                </li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                    
+                    <a href="#">
+                        
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="footer-copyright">
+            <ul class="footer-text">
+                <li>&COPY; Copyright SayHariOm. All Rights Reserved</li>
+            </ul>
+        </div>
+        </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
+

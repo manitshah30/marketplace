@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* From Uiverse.io by alexruix */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+
+.input {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #D9E8D8;
+    color: #0d0c22;
+    box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
+    transition: .3s ease;
+    height: 20px;
+    width: 255px;
+}
+
+.input::placeholder {
+    color: #777;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #777;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+/* From Uiverse.io by thewizardofzen */
+button {
+    --primary-color: #ffffffe1;
+    --secondary-color: #002152;
+    --hover-color: #c7c8ca;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: rgba(102, 153, 76, 255);
+}
+
+.bar li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.bar li img {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* cart */
+/* From Uiverse.io by akshat-patel28 */
+/* .button-container {
+    display: flex;
+    background-color: white;
+    width: auto;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 60px;
+    margin-right: 10px;
+    
+  } */
+
+.cart-button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    transform: translate(0px, 1px);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 20px;
+}
+
+
+
+
+
+.shopping-cart {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 30px 0 30px 135px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn,
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.image img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.description {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart-summary {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.cart-summary p {
+    margin: 5px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.checkout {
+    text-align: center;
+}
+
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transform: translateX(492px);
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+.footer-social {
+    background-color: #81A263;
+    color: black;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #CDE990;
+    margin: 10px 0 10px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+}
+
+.social-media li {
+    margin: 0 40px;
+    /* Spacing between icons */
+}
+
+.social-media a svg {
+    width: 40px;
+    /* Size of the icons */
+    height: 40px;
+}
+
+/* Footer for copyright */
+.footer-copyright {
+    background-color: #81A263;
+    color: black;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+    border-radius: 10px;
+
+}
+
+.footer-text {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.about {
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 200px;
+    border-radius: 10px;
+
+    background-color: #CDE990;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+}
