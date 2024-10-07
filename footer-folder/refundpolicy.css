@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'poppins', serif;
+    line-height: 1.7;
+    color: rgba(34, 51, 17, 255); /* Very dark green font color */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+.header {
+    background-color: rgba(102, 153, 76, 1); /* Specific rgba color */
+    color: #fff;
+    padding: 40px 10%;
+    text-align: center;
+    border-bottom: 5px solid rgba(76, 102, 51, 1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Refund Content Styling */
+.refund-content {
+    padding: 50px 10%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    color: rgba(102, 153, 76, 1);
+    border-bottom: 3px solid rgba(76, 102, 51, 1);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.section p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: rgba(102, 153, 76, 1);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid rgba(76, 102, 51, 1);
+}
+
+.footer p {
+    margin: 0;
+}

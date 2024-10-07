@@ -1,0 +1,99 @@
+/* footer */
+.footer-social {
+    background-color: #81A263;
+    color: black;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #CDE990;
+    margin: 10px 0 10px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+}
+
+.social-media li {
+    margin: 0 40px;
+    /* Spacing between icons */
+}
+
+.social-media a svg {
+    width: 40px;
+    /* Size of the icons */
+    height: 40px;
+}
+
+/* Footer for copyright */
+.footer-copyright {
+    background-color: #81A263;
+    color: black;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+    border-radius: 10px;
+
+}
+
+.footer-text {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.about {
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 200px;
+    border-radius: 10px;
+
+    background-color: #CDE990;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.375);
+    border-top: 2px solid rgba(0, 0, 0, 0.375);
+}
+
+/* footer linking */
+.about a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the original text color */
+    font-size: inherit; /* Keeps the font size the same */
+    font-weight: inherit; /* Keeps the same font weight */
+    cursor: default; /* Prevents pointer cursor change */
+}
+.about a:hover{
+    cursor: pointer;
+}

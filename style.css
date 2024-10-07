@@ -3,6 +3,7 @@ body{
     background-color: rgb(194, 250, 194);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 ul {
@@ -90,7 +91,7 @@ cursor: pointer;
 .dropdown li:last-child {
     border-bottom: none;
 }
-.box {
+/* .box {
     position: relative;
     width: 100vw;
     height: 80vh;
@@ -99,10 +100,9 @@ cursor: pointer;
     justify-content: center;
     font-size: 80px;
     font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
-    color: black; /* Ensures text is black */
+    font-family: 'Poppins', sans-serif; 
 
-    /* Ensure the text is above the pseudo-element */
+   
     z-index: 1;
 }
 
@@ -116,11 +116,56 @@ cursor: pointer;
     background-image: url('https://templately.com/_next/image?url=https%3A%2F%2Fitems.templately.com%2Fpack-a420d19e41f217b6e92e15c73f79e161%2Fbanner_pack%202.jpg&w=2048&q=75');
     background-size: cover;
     background-position: center;
-    opacity: 0.6; /* Opacity only applies to the background */
-    z-index: -1; /* Sends the pseudo-element behind the text */
+    opacity: 0.6; 
+    z-index: -1;
+ }
+
+
+#dynamic-text {
+    border-right: 2px solid black; 
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+} */
+
+/* Main container for the background image and text */
+.box {
+    position: relative;
+    width: 100vw; /* Full width */
+    height: 80vh; /* Height of the box */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 80px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+    overflow: hidden; /* Ensure no content overflows */
 }
 
+/* The background image */
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://templately.com/_next/image?url=https%3A%2F%2Fitems.templately.com%2Fpack-a420d19e41f217b6e92e15c73f79e161%2Fbanner_pack%202.jpg&w=2048&q=75');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Dim the background */
+    z-index: -1; /* Make sure it stays behind the text */
+}
 
+/* Styling for the text */
+.box-text {
+    position: relative;
+    z-index: 1; /* Ensures text stays on top of the background image */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Dynamic text style */
 #dynamic-text {
     border-right: 2px solid black; /* Cursor effect */
     padding-right: 5px;
@@ -398,3 +443,124 @@ button:hover .arrow:before {
     right: 0;
 }
 
+/* faq */
+.faq-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start; /* Align boxes to the top */
+    gap: 50px;  /* Space between boxes */
+   
+  }
+  
+  .faq-box {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background-color: #ffda76d9;
+    opacity: 0.9;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: height 0.4s ease; /* Allow smooth height change */
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden; /* Prevent content overflow */
+
+  }
+  
+  .faq-inner-box {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: bolder;
+    z-index: 2;
+  }
+  
+  .faq-expand-box {
+    position: absolute;
+    bottom: -100%;  /* Start off-screen at the bottom */
+    left: 0;  /* Align with the left edge of the box */
+    width: 100%;  /* Full width of the box */
+    height: 100%; /* Full height of the box */
+    background-color: hsl(134, 28%, 52%);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: bottom 0.4s ease; /* Smooth transition for bottom position */
+    z-index: 0; /* Behind the main box initially */
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  /* Expand from the bottom when hovered */
+  .faq-box:hover .faq-expand-box {
+    bottom: 0;  /* Move to the bottom of the main box */
+    z-index: 3; /* Bring the expanded box to the front */
+  }
+  
+  /* Hide the inner box of the hovered box */
+  .faq-box:hover .faq-inner-box {
+    display: none; /* Hide the inner box when expanded */
+  }
+  
+  /* Prevent other boxes from moving */
+  .faq-box:hover {
+    z-index: 2;  /* Bring the hovered box to the front */
+  }
+  
+/* categories slider */
+.display-cat{
+    background-color: #C1D8C3;
+    display: flex;
+    gap: 30px;
+    padding: 50px 100px 50px 180px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.display-cat img{
+    height: 350px;
+    width: 210px;
+    border-radius: 5px;
+}
+.display-cat .cat-img{
+    transition: .5s;
+    filter: brightness(0.5);
+}
+.display-cat .cat-img:hover{
+    filter: brightness(1);
+    transform: translateZ(150px);
+}
+.display-cat .cat-img:hover + *{
+    filter: brightness(0.6);
+    transform: translateZ(120px) rotateY(40deg);
+}
+.display-cat .cat-img:hover + * + *{
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+.display-cat .cat-img:hover + * + * + *{
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg);
+}
+.display-cat .cat-img:has(+ *:hover){
+    filter: brightness(0.6);
+    transform: translateZ(120px) rotateY(-40deg);
+}
+.display-cat .cat-img:has(+ * + *:hover){
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+.display-cat .cat-img:has(+ * + * + *:hover){
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg);
+}
+/* discount */
+.discount-box img{
+  width: 100vw;
+    
+}

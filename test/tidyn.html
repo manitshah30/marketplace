@@ -1,0 +1,34 @@
+<!-- dynamic-text.html -->
+<span id="dynamicText"></span>
+
+<script>
+  function startDynamicText() {
+    const dynamicText = ["Fruits", "Vegetables", "Personal Care", "Beverages", "Bakery Products"];
+    let index = 0;
+    let dynamicTextContainer = document.getElementById('dynamicTextContainer');
+    let typingSpeed = 150;
+    let deletingSpeed = 100;
+    let delayBetweenWords = 2000;
+
+    function typeWord(word, i) {
+      if (i < word.length) {
+        dynamicTextContainer.textContent += word.charAt(i);
+        setTimeout(() => typeWord(word, i + 1), typingSpeed);
+      } else {
+        setTimeout(() => deleteWord(word), delayBetweenWords);
+      }
+    }
+
+    function deleteWord(word) {
+      if (word.length > 0) {
+        dynamicTextContainer.textContent = word.substring(0, word.length - 1);
+        setTimeout(() => deleteWord(word.substring(0, word.length - 1)), deletingSpeed);
+      } else {
+        index = (index + 1) % dynamicText.length;
+        typeWord(dynamicText[index], 0);
+      }
+    }
+
+    typeWord(dynamicText[index], 0);
+  }
+</script>

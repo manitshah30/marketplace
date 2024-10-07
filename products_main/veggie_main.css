@@ -23,9 +23,7 @@ ul {
     display: flex;
     align-items: center;
 }
-.signup, .cart, .search {
-    padding: 0 20px;
-}
+
 .bar li img {
     height: 40px; 
     width: auto; 
@@ -90,57 +88,10 @@ cursor: pointer;
 .dropdown li:last-child {
     border-bottom: none;
 }
-.search-btn{
-    border: none;
-    height: 30px;
-    width: auto;
-    border-radius: 50px;
-    font-size: large;
-    text-align: center;
-    opacity: 0.5;
-    }
-.search{
-    position: absolute;
-    
-    /* transform: translate(-10px, 1px); */
-}
-.search-icon{
-    transform: translate(-10px, 5px);
-}
-.sign-btn{
-    height: 38px;
-    width: 200px;
-}
-#signup-id{
-    border: none;
-    height: 30px;
-    width: auto;
-    border-radius: 50px;
-    font-size: large;
-    text-align: center;
-    opacity: 0.5;
-    }
-#signup-id:hover{
-cursor: pointer;
-opacity: 0.7;
-}
-.cart-btn{
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
-    border: none;
-    opacity: 0.5;
-}
-.cart-svg{
-    transform: translate(-27px, -1px);
-}
-.sign-svg{
-    transform: translate(3px, 3px);
-}
+
 /* product display css */
 .veggie-box{
-    margin-top: 300px;
-    margin-left: 120px;
+    margin: 300px 0 70px 120px;
     display: flex;
     gap: 35px;
    

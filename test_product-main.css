@@ -357,7 +357,7 @@ body {
     cursor: pointer;
 }
 /* From Uiverse.io by elijahgummer */ 
-ul {
+/* ul {
     position: relative;
     display: flex;
     gap: 25px;
@@ -445,7 +445,7 @@ ul {
   ul li:hover .title {
     transform: scale(1);
     transition-delay: 0.25s;
-  }
+  } */
   /* From Uiverse.io by Df12345677 */ 
 .button {
     height: 60px;
@@ -459,9 +459,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px; */
+    
     overflow: hidden;
-    /* margin: 20px 0 20px 0; */
+  
     margin: 27px 0 27px 0;
   }
   

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME_PAGE</title>
     <link rel="stylesheet" href="style.css">
-   
-    
+
+  
 
 </head>
 <body>
-    <nav>
+    
+    <!-- <nav>
         <ul class="bar">
         <li><img class="logo" src="assets/images/logoo.jpg" alt="logo"></li>
         <li><div class="group">
@@ -102,14 +103,41 @@
         </ul>
     </li>
     </ul>
-</nav> 
+</nav>  -->
+
+<div id="header"></div>
 
 
-<div class="box">
-    <span class="box-text" id="static-text" >Buy </span>&nbsp;<span class="box-text" id="dynamic-text"></span>
+
+
+ <!-- <div class="box"></div>
+    <span class="box-text" id="static-text" >Buy </span>&nbsp;<span class="box-text" id="dynamic-text"></span> -->
    
 
+    <div class="box">
+        <!-- Where the dynamic text will be inserted -->
+        <div>
+            Buy &nbsp
+        </div>
+        <div id="dynamicTextContainer"></div>
+      </div>
+
+</div> 
+
+</div> 
+
+<div class="discount-box">
+    <img src="assets/images/discount.jpg" alt="discount">
 </div>
+
+<div class="display-cat">
+    <div class="cat-img"><a href="./products_main/fruits_main.html"><img src="assets/images/fruitcat.jpg" alt="fruits"></a></div>
+    <div class="cat-img"><a href="./products_main/veggie_main.html"><img src="assets/images/veggiecat.jpg" alt="vegetable"></a></div>
+    <div class="cat-img"><a href="./products_main/pc_main.html"><img src="assets/images/pccat.jpg" alt="personal care"></a></div>
+    <div class="cat-img"><a href="./products_main/bv_main.html"><img src="assets/images/bvcat.jpg" alt="beverages"></a></div>
+    <div class="cat-img"><a href="./products_main/bk_main.html"><img src="assets/images/bkcat.jpg" alt="bakery products"></a></div>
+</div>
+
 <div class="slider-box">
 
     <section class="container">
@@ -131,14 +159,31 @@
     </section>
 </div>
 
+<div class="faq-container">
+    <!-- First FAQ Box -->
+    <div class="faq-box">
+        <div class="faq-inner-box">What makes your products organic?</div>
+        <div class="faq-expand-box">Our products are 100% organic, grown without synthetic chemicals, GMOs, or artificial preservatives, ensuring natural and sustainable quality.</div>
+    </div>
+    <!-- Second FAQ Box -->
+    <div class="faq-box">
+        <div class="faq-inner-box">What products do you offer?</div>
+        <div class="faq-expand-box">We offer organic fruits, personal care, bakery items, beverages, and dairy products, all made with natural, chemical-free ingredients.</div>
+    </div>
+    <!-- Third FAQ Box -->
+    <div class="faq-box">
+        <div class="faq-inner-box">Why choose organic products?</div>
+        <div class="faq-expand-box">Organic products are healthier, chemical-free, and support sustainable farming practices that are better for you and the environment.</div>
+    </div>
+</div>
    
     
 
     
 <footer>
    
-    
-    <div class="about">
+    <div id="footer"></div>
+    <!-- <div class="about">
         <div>About Us</div>
         <div>Terms of Service</div>
         <div>Contact</div>
@@ -148,6 +193,7 @@
     </div>
     
     <div class="foot">
+        
         <ul class="social-media">
             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                 <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
@@ -192,10 +238,11 @@
         <ul class="footer-text">
             <li>&COPY; Copyright SayHariOm. All Rights Reserved</li>
         </ul>
-    </div>
+    </div> -->
     </footer>
     
     <script src="script.js"></script>   
+ 
     <script src="products/fruits/fruit1.js"></script> 
     <script src="products/fruits/fruit2.js"></script>  
     <script src="products/fruits/fruit3.js"></script>
@@ -217,6 +264,124 @@
     <script src="products/bakery/bakery3.js"></script>
     <script src="products/bakery/bakery4.js"></script>    
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Load the header
+          fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('header').innerHTML = data;
+              // Now that the header is loaded, start the dynamic text function
+              startDynamicText();
+            });
+        });
+      
+        // function startDynamicText() {
+        //   const dynamicText = ["Fruits", "Vegetables", "Personal Care", "Beverages", "Bakery Products"];
+        //   let index = 0;
+        //   let dynamicTextContainer = document.getElementById('dynamicTextContainer');
+        //   let typingSpeed = 150;
+        //   let deletingSpeed = 100;
+        //   let delayBetweenWords = 2000;
+      
+        //   function typeWord(word, i) {
+        //     if (i < word.length) {
+        //       dynamicTextContainer.textContent += word.charAt(i);
+        //       setTimeout(() => typeWord(word, i + 1), typingSpeed);
+        //     } else {
+        //       setTimeout(() => deleteWord(word), delayBetweenWords);
+        //     }
+        //   }
+      
+        //   function deleteWord(word) {
+        //     if (word.length > 0) {
+        //       dynamicTextContainer.textContent = word.substring(0, word.length - 1);
+        //       setTimeout(() => deleteWord(word.substring(0, word.length - 1)), deletingSpeed);
+        //     } else {
+        //       index = (index + 1) % dynamicText.length;
+        //       typeWord(dynamicText[index], 0);
+        //     }
+        //   }
+      
+        //   typeWord(dynamicText[index], 0);
+        // }
+
+        function startDynamicText() {
+    const dynamicText = ["Fruits", "Vegetables", "Personal Care", "Beverages", "Bakery Products"];
+    let index = 0;
+    let dynamicTextContainer = document.getElementById('dynamicTextContainer');
+    let typingSpeed = 150;         // Speed of typing each character
+    let deletingSpeed = 100;       // Speed of deleting each character
+    let delayBetweenWords = 2000;  // Delay after completing each word
+
+    function typeWord(word, i) {
+        if (i < word.length) {
+            dynamicTextContainer.textContent += word.charAt(i);
+            setTimeout(() => typeWord(word, i + 1), typingSpeed);
+        } else {
+            setTimeout(() => deleteWord(word.length), delayBetweenWords);  // Wait before deleting
+        }
+    }
+
+    function deleteWord(length) {
+        if (length > 0) {
+            dynamicTextContainer.textContent = dynamicTextContainer.textContent.substring(0, length - 1);
+            setTimeout(() => deleteWord(length - 1), deletingSpeed);
+        } else {
+            index = (index + 1) % dynamicText.length; // Move to the next word
+            typeWord(dynamicText[index], 0); // Start typing the next word
+        }
+    }
+
+    // Start typing the first word
+    typeWord(dynamicText[index], 0);
+}
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('.slider');
+    const leftButton = document.querySelector('.left-button');
+    const rightButton = document.querySelector('.right-button');
+  
+    let scrollAmount = 0;
+    const slideWidth = slider.clientWidth;
+  
+    rightButton.addEventListener('click', () => {
+        scrollAmount += slideWidth;
+        if (scrollAmount >= slider.scrollWidth) {
+            scrollAmount = 0;
+        }
+        slider.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+  
+    leftButton.addEventListener('click', () => {
+        scrollAmount -= slideWidth;
+        if (scrollAmount < 0) {
+            scrollAmount = slider.scrollWidth - slideWidth;
+        }
+        slider.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+          // Load the header
+          fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('footer').innerHTML = data;
+              
+            });
+        });
+      </script>
+    
+
 </body>
 </html>
-

@@ -3,25 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider with Buttons</title>
-    <link rel="stylesheet" href="kuchbhi.css">
+    <title>HOME_PAGE</title>
+    <link rel="stylesheet" href="style.css">
+   
+    
+
 </head>
 <body>
+    <div id="header"></div>
+
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+
+<div class="box">
+    <span class="box-text" id="static-text" >Buy </span>&nbsp;<span class="box-text" id="dynamic-text"></span>
+   
+
+</div>
+<div class="slider-box">
+
     <section class="container">
         <div class="slider-wrapper">
             <div class="slider">
-                <img src="https://images.unsplash.com/photo-1583364486567-ce2e045676e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D" alt="slide1" id="slide1">
+                <img src="https://images.unsplash.com/photo-1526250000311-b8f091ec8cac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D" alt="slide1" id="slide1">
+                
+                <img src="https://images.unsplash.com/photo-1590779032260-5623d6774f7a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide2" id="slide2">
+                
+                <img src="https://images.unsplash.com/photo-1642505171466-522d3e8ee3fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHNraW4lMjBjYXJlJTIwcHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="slide3" id="slide3">
 
-                <img src="https://images.unsplash.com/photo-1689521568081-c5baa6133bd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww" alt="slide2" id="slide2">
+                <img src="https://images.unsplash.com/photo-1657310217253-176cd053e07e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGJldmVyYWdlfGVufDB8fDB8fHww" alt="slide4" id="slide4">
 
-                <img src="https://images.unsplash.com/photo-1671347020855-8f35d210ee9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D" alt="slide3" id="slide3">
+                <img src="https://images.unsplash.com/photo-1612539466296-4ecf1db303e3?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide5" id="slide5">
             </div>
             <button class="slider-button left-button">&#10094;</button>
             <button class="slider-button right-button">&#10095;</button>
         </div>
     </section>
+</div>
+<div id="footer"></div>
 
-    <script src="kuchbhi.js"></script>
+<script>
+    fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+   
+    
+
+    
+
+    
+    <script src="script.js"></script>   
+    <script src="products/fruits/fruit1.js"></script> 
+    <script src="products/fruits/fruit2.js"></script>  
+    <script src="products/fruits/fruit3.js"></script>
+    <script src="products/fruits/fruit4.js"></script> 
+    <script src="products/vegetables/vegetable1.js"></script>
+    <script src="products/vegetables/vegetable2.js"></script>
+    <script src="products/vegetables/vegetable3.js"></script>
+    <script src="products/vegetables/vegetable4.js"></script>
+    <script src="products/personal_care/personal_care1.js"></script>
+    <script src="products/personal_care/personal_care2.js"></script>
+    <script src="products/personal_care/personal_care3.js"></script>
+    <script src="products/personal_care/personal_care4.js"></script>
+    <script src="products/beverages/beverage1.js"></script>
+    <script src="products/beverages/beverage2.js"></script>
+    <script src="products/beverages/beverage3.js"></script>
+    <script src="products/beverages/beverage4.js"></script>
+    <script src="products/bakery/bakery1.js"></script>
+    <script src="products/bakery/bakery2.js"></script>
+    <script src="products/bakery/bakery3.js"></script>
+    <script src="products/bakery/bakery4.js"></script>    
+
 </body>
 </html>
 
