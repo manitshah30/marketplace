@@ -1,4 +1,18 @@
 /* footer */
+/* body a{
+  text-decoration: none;  
+  text-decoration-color: inherit; 
+} */
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    cursor: pointer;
+}
+
+
 .footer-social {
     background-color: #81A263;
     color: black;

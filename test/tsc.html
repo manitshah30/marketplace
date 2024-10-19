@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        .cart-item {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .remove-item {
+            color: red;
+            cursor: pointer;
+        }
+        .checkout-btn {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <a href="/payment.html"><button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button></a>
+
+
+    <script>
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let totalPrice = 0;
+
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItems.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'cart-item';
+                    itemDiv.innerHTML = `
+                        <p>${item.name} - $${item.price} <span class="remove-item" data-index="${index}">[Remove]</span></p>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                    totalPrice += parseFloat(item.price); // Sum up the prices
+                });
+                const totalDiv = document.createElement('div');
+                totalDiv.innerHTML = `<strong>Total: $${totalPrice.toFixed(2)}</strong>`;
+                cartItemsContainer.appendChild(totalDiv);
+            }
+
+            // Add event listeners for remove buttons
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.getAttribute('data-index');
+                    removeItemFromCart(index);
+                });
+            });
+        }
+
+        function removeItemFromCart(index) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1); // Remove item from array
+            localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update local storage
+            updateCart(); // Refresh cart display
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCart();
+            setInterval(updateCart, 1000); // Update cart every 1 second
+        });
+    </script>
+</body>
+</html>

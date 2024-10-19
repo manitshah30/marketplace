@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        .product {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="product" data-name="Organic Apple" data-price="2.00">
+        <h2>Organic Apple</h2>
+        <p>Price: $2.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const product = button.closest('.product');
+                    const productName = product.getAttribute('data-name');
+                    const productPrice = product.getAttribute('data-price');
+
+                    // Store product details in local storage
+                    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    cartItems.push({ name: productName, price: productPrice });
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                    alert(`${productName} has been added to your cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

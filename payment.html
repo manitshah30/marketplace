@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COD Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <script>
+        function validateForm() {
+            // Get all input fields
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const zipcode = document.getElementById('zipcode').value.trim();
+
+            // Check if all fields are filled
+            if (!name || !email || !address || !city || !zipcode) {
+                alert('Please fill out all required fields.');
+                return false;
+            }
+
+            // If all fields are filled, allow redirection
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Cash on Delivery (COD)</h1>
+        
+        <!-- Billing Details -->
+        <div class="billing-details">
+            <h2>Billing Information</h2>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="zipcode">Zip Code</label>
+            <input type="text" id="zipcode" name="zipcode" required>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Subtotal: <span id="subtotal">$59.99</span></p>
+            <p>Tax: <span id="tax">$5.99</span></p>
+            <p>Total: <span id="total">$65.98</span></p>
+        </div>
+
+        <!-- Direct Link to test.html -->
+        <a href="pay-tick.html" class="pay-now-btn" onclick="return validateForm()">Place Order (COD)</a>
+    </div>
+</body>
+</html>

@@ -1,17 +1,19 @@
     <link rel="stylesheet" href="header.css">
     <nav>
         <ul class="bar">
-        <li><a href="./index.html"><img class="logo" src="assets/images/logoo.jpg" alt="logo"></a></li>
+        <li><a href="../index.html"><img class="logo" src="../assets/images/logoo.jpg" alt="logo"></a></li>
         <li><div class="group">
             <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
                 <g>
                     <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
                 </g>
             </svg>
-            <input placeholder="Search" type="search" class="input">
+            <input placeholder="Search" type="text" class="input" id="searchBar">
         </div>
+        
+        
     </li>
-        <li><a href="./signup.html">
+        <li><a href="../signup.html">
 
             <button id="signup-id">Sign up
                 <div class="arrow-wrapper">
@@ -21,7 +23,7 @@
         <li> <div class="button-container">
                 
           
-            <a href="./cart.html">   <button class="cart-button">
+            <a href="../test/tsc.html">   <button class="cart-button">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="black" class="icon">
                     <circle r="1" cy="21" cx="9"></circle>
@@ -33,6 +35,7 @@
           </div></li>
         </ul>
     </nav>
+    <div id="root"></div>
 <nav>
     <ul class="navbar">
         <li><span>Fruits</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -41,10 +44,11 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li id="fruit1"><a href="./products/fruits/fruit1.html">Fruit 1</a></li>
-            <li id="fruit2"><a href="./products/fruits/fruit2.html">Fruit 2</a></li>
-            <li id="fruit3"><a href="./products/fruits/fruit3.html">Fruit 3</a></li>
-            <li id="fruit4"><a href="./products/fruits/fruit4.html">Fruit 4</a></li>
+            <li id="fruit1"><a href="../products/fruits/fruit1.html">Organic Apples</a></li>
+            <li id="fruit2"><a href="../products/fruits/fruit2.html">Organic Mangoes
+            </a></li>
+            <li id="fruit3"><a href="../products/fruits/fruit3.html">Farmfresh Blueberries</a></li>
+            <li id="fruit4"><a href="../products/fruits/fruit4.html">Avocados</a></li>
         </ul>
     </li>
         <li><span>Vegetables </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -53,10 +57,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li id="vegetable1"><a href="./products/vegetables/vegetable1.html">Vegetable - 1</a></li>
-            <li id="vegetable2"><a href="./products/vegetables/vegetable2.html">Vegetable - 2</a></li>
-            <li id="vegetable3"><a href="./products/vegetables/vegetable3.html">Vegetable - 3</a></li>
-            <li id="vegetable4"><a href="./products/vegetables/vegetable4.html">Vegetable - 4</a></li>
+            <li id="vegetable1"><a href="../products/vegetables/vegetable1.html">FarmFresh Cabbage</a></li>
+            <li id="vegetable2"><a href="../products/vegetables/vegetable2.html">FarmFresh Potatatoes</a></li>
+            <li id="vegetable3"><a href="../products/vegetables/vegetable3.html">FarmFresh Broccoli</a></li>
+            <li id="vegetable4"><a href="../products/vegetables/vegetable4.html">Carrots</a></li>
         </ul>
     </li>
         <li><span>Personal Care</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -65,10 +69,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li id="personal_care1"><a href="./products/personal_care/personal_care1.html">Personal Care 1</a></li>
-            <li id="personal_care2"><a href="./products/personal_care/personal_care2.html">Personal Care 2</a></li>
-            <li id="personal_care3"><a href="./products/personal_care/personal_care3.html">Personal Care 3</a></li>
-            <li id="personal_care4"><a href="./products/personal_care/personal_care4.html">Personal Care 4</a></li>
+            <li id="personal_care1"><a href="../products/personal_care/personal_care1.html">Coconut Body Oil</a></li>
+            <li id="personal_care2"><a href="../products/personal_care/personal_care2.html">Bamboo Fibers Shampoo</a></li>
+            <li id="personal_care3"><a href="../products/personal_care/personal_care3.html">Restorative Hair Mask</a></li>
+            <li id="personal_care4"><a href="../products/personal_care/personal_care4.html">Ultimate Haircare Trio</a></li>
         </ul>
     </li>
         <li><span>Beverages</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -77,10 +81,10 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li id="beverage1"><a href="./products/beverages/beverage1.html">Beverages 1</a></li>
-            <li id="beverage2"><a href="./products/beverages/beverage2.html">Beverages 2</a></li>
-            <li id="beverage3"><a href="./products/beverages/beverage3.html">Beverages 3</a></li>
-            <li id="beverage4"><a href="./products/beverages/beverage4.html">Beverages 4</a></li>
+            <li id="beverage1"><a href="../products/beverages/beverage1.html">Cashew Vanilla Cinnamon Agave</a></li>
+            <li id="beverage2"><a href="../products/beverages/beverage2.html">Pineapple apple mint</a></li>
+            <li id="beverage3"><a href="../products/beverages/beverage3.html">Beet Apple Carrot Lemon Ginger</a></li>
+            <li id="beverage4"><a href="../products/beverages/beverage4.html">Coffee Cashew Cinnamon Vanilla</a></li>
         </ul>
     </li>
         <li>Bakery Products <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14"
@@ -89,12 +93,13 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <ul class="dropdown">
-            <li id="bakery1"><a href="./products/bakery/bakery1.html">Bakery Products 1</a></li>
-            <li id="bakery2"><a href="./products/bakery/bakery2.html">Bakery Products 2</a></li>
-            <li id="bakery3"><a href="./products/bakery/bakery3.html">Bakery Products 3</a></li>
-            <li id="bakery4"><a href="./products/bakery/bakery4.html">Bakery Products 4</a></li>
+            <li id="bakery1"><a href="../products/bakery/bakery1.html">Dark Delight Cookies</a></li>
+            <li id="bakery2"><a href="../products/bakery/bakery2.html">Croissant</a></li>
+            <li id="bakery3"><a href="../products/bakery/bakery3.html">Sour Dough Bread</a></li>
+            <li id="bakery4"><a href="../products/bakery/bakery4.html">Multigrain Bread</a></li>
         </ul>
     </li>
     </ul>
 </nav>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script src="header.js"></script>
