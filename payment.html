@@ -6,23 +6,40 @@
     <title>COD Payment</title>
     <link rel="stylesheet" href="payment.css">
     <script>
+        // Function to validate the form fields
         function validateForm() {
-            // Get all input fields
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const address = document.getElementById('address').value.trim();
             const city = document.getElementById('city').value.trim();
             const zipcode = document.getElementById('zipcode').value.trim();
 
-            // Check if all fields are filled
             if (!name || !email || !address || !city || !zipcode) {
                 alert('Please fill out all required fields.');
                 return false;
             }
-
-            // If all fields are filled, allow redirection
             return true;
         }
+
+        // Function to load the cart total from localStorage and calculate the total with tax
+        function loadCartTotal() {
+            const cartTotal = localStorage.getItem('cartTotal');
+            if (cartTotal) {
+                const subtotal = parseFloat(cartTotal);
+                const taxRate = 0.10; // 10% tax
+                const tax = subtotal * taxRate;
+                const total = subtotal + tax;
+
+                document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+                document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+                document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            }
+        }
+
+        // Load the cart total when the page is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            loadCartTotal();
+        });
     </script>
 </head>
 <body>
@@ -51,12 +68,12 @@
         <!-- Order Summary -->
         <div class="order-summary">
             <h2>Order Summary</h2>
-            <p>Subtotal: <span id="subtotal">$59.99</span></p>
-            <p>Tax: <span id="tax">$5.99</span></p>
-            <p>Total: <span id="total">$65.98</span></p>
+            <p>Subtotal: <span id="subtotal">$0.00</span></p>
+            <p>Tax: <span id="tax">$0.00</span></p>
+            <p>Total: <span id="total">$0.00</span></p>
         </div>
 
-        <!-- Direct Link to test.html -->
+        <!-- Place Order Button -->
         <a href="pay-tick.html" class="pay-now-btn" onclick="return validateForm()">Place Order (COD)</a>
     </div>
 </body>

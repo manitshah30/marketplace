@@ -1,61 +1,46 @@
-const products = [
-    {
-        id: 1,
-        image: 'assets/images/fruitMain1.jpg',
-        title: 'Organic Apple',
 
-    },
-    {
-        id: 2,
-        image: 'assets/images/fruitMain2.jpg',
-        title: 'Organic Mango',
-        
-    },
-    {
-        id: 3,
-        image: 'assets/images/fruitMain3.jpg',
-        title: 'Farmfresh Blueberry',
-    
-    },
-    // Add more organic products here
+const products = [
+    { name: 'Apple', price: 2.00, description: 'This is Fruit 1', page: '/products/fruits/fruit1.html' },
+    { name: 'Mango', price: 2.00, description: 'This is Fruit 1', page: '/products/fruits/fruit2.html' },
+    { name: 'Blueberry', price: 2.00, description: 'This is Fruit 1', page: '/products/fruits/fruit3.html' },
+    { name: 'Avocado', price: 2.00, description: 'This is Fruit 1', page: '/products/fruits/fruit4.html' },
+    { name: 'Cabbage', price: 2.00, description: 'This is Fruit 1', page: '/products/vegetables/vegetable1.html' },
+    { name: 'Potato', price: 2.00, description: 'This is Fruit 1', page: '/products/vegetables/vegetable2.html' },
+    { name: 'Broccoli', price: 2.00, description: 'This is Fruit 1', page: '/products/vegetables/vegetable3.html' },
+    { name: 'Carrot', price: 2.00, description: 'This is Fruit 1', page: '/products/vegetables/vegetable4.html' },
+    { name: 'Coconut Body Oil', price: 2.00, description: 'This is Fruit 1', page: '/products/personal_care/personal_care1.html' },
+    { name: 'Bamboo Fibers Shampoo', price: 2.00, description: 'This is Fruit 1', page: '/products/personal_care/personal_care2.html' },
+    { name: 'Restorative Hair Mask', price: 2.00, description: 'This is Fruit 1', page: '/products/personal_care/personal_care3.html' },
+    { name: 'Ultimate Haircare Trio', price: 2.00, description: 'This is Fruit 1', page: '/products/personal_care/personal_care4.html' },
+    { name: 'Cashew Vanilla Cinnamon Agave', price: 2.00, description: 'This is Fruit 1', page: '/products/beverages/beverage1.html' },
+    { name: 'Pineapple Apple Mint', price: 2.00, description: 'This is Fruit 1', page: '/products/beverages/beverage2.html' },
+    { name: 'Beet Apple Carrot Lemon Ginger', price: 2.00, description: 'This is Fruit 1', page: '/products/beverages/beverage3.html' },
+    { name: 'Coffee Cashew Cinnamon Vanilla', price: 2.00, description: 'This is Fruit 1', page: '/products/beverages/beverage4.html' },
+    { name: 'Dark Delight Cookies', price: 2.00, description: 'This is Fruit 1', page: '/products/bakery/bakery1.html' },
+    { name: 'Croissant', price: 2.00, description: 'This is Fruit 1', page: '/products/bakery/bakery2.html' },
+    { name: 'Sour Dough Bread', price: 2.00, description: 'This is Fruit 1', page: '/products/bakery/bakery3.html' },
+    { name: 'Multigrain Bread', price: 2.00, description: 'This is Fruit 1', page: '/products/bakery/bakery4.html' }
 ];
 
-// Initially display all products
-displayItem(products);
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchBar');
 
-// Event listener for search functionality
-document.getElementById('searchBar').addEventListener('keyup', (e) => {
-    const searchData = e.target.value.toLowerCase();
+    searchInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission if inside a form
 
-    // Filter the products based on search input
-    const filteredData = products.filter((item) => 
-        item.title.toLowerCase().includes(searchData)
-    );
+            const searchTerm = searchInput.value.trim().toLowerCase();
 
-    // Display filtered products
-    displayItem(filteredData);
+            // Search for the product and redirect to the product page
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].name.toLowerCase().includes(searchTerm) || products[i].description.toLowerCase().includes(searchTerm)) {
+                    window.location.href = products[i].page; // Redirect to the product page
+                    return;
+                }
+            }
+
+            // If no product is found, display a message
+            alert('No product found!');
+        }
+    });
 });
-
-// Function to display items
-function displayItem(items) {
-    const rootElement = document.getElementById('root');
-
-    if (items.length === 0) {
-        rootElement.innerHTML = '<p>No products found</p>';
-        return;
-    }
-
-    rootElement.innerHTML = items.map((item) => {
-        const { image, title, price } = item;
-        return `
-            <div class='box'>
-                <div class='img-box'>
-                    <img class='images' src=${image} alt='${title}' />
-                </div>
-                <div class='bottom'>
-                    <p>${title}</p>
-                    
-                </div>
-            </div>`;
-    }).join('');
-}

@@ -22,18 +22,25 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 // Prepare and execute the query
-$query = "INSERT INTO users (email, password) 
-          VALUES ($1, $2)";
+$query = "SELECT token FROM users WHERE email = $1 AND password = $2";
 $result = pg_query_params($conn, $query, array($email, $password));
 
 if ($result) {
-  header("Location: signup.html");
-  exit();
+
+  $rows = pg_num_rows($result);
+  $res = pg_fetch_result($result, "token");
+
+  if ($rows === 0) {
+    echo "Login Failed";
+  } else {
+    header("Location: index.html");
+    exit();
+  }
+
 } else {
-  echo "Registration failed: " . pg_last_error();
+  echo "Login failed: " . pg_last_error();
 }
 
 // Close connection
 pg_close($conn);
 ?>
-

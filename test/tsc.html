@@ -4,31 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <style>
-        .cart-item {
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        .remove-item {
-            color: red;
-            cursor: pointer;
-        }
-        .checkout-btn {
-            padding: 10px 20px;
-            background-color: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="tsc.css">
 </head>
 <body>
     <h1>Your Shopping Cart</h1>
     <div id="cart-items"></div>
     <a href="/payment.html"><button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button></a>
-
 
     <script>
         function updateCart() {
@@ -54,6 +35,9 @@
                 totalDiv.innerHTML = `<strong>Total: $${totalPrice.toFixed(2)}</strong>`;
                 cartItemsContainer.appendChild(totalDiv);
             }
+
+            // Store the total price in localStorage
+            localStorage.setItem('cartTotal', totalPrice.toFixed(2));
 
             // Add event listeners for remove buttons
             document.querySelectorAll('.remove-item').forEach(button => {

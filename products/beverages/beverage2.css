@@ -10,6 +10,13 @@ body {
     margin: 0;
     background-color: #CCD5AE;
     
+    .footer-copyright{
+      margin-top: 20px;
+      background-color: #3b8b74;
+      text-align: center;
+      font-size: large;
+      padding: 10px;
+    }
 }
 .flex-name{
   display: flex;
