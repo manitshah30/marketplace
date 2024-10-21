@@ -3,7 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
-    /* display: flex; */
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
-/* From Uiverse.io by Tsiangana */ 
+
 .ui-bookmark {
     --icon-size: 40px;
     --icon-secondary-color: rgb(77, 77, 77);
@@ -254,14 +254,11 @@ body {
 }
 
 .product-image {
-    /* width: 30vw;
-    /* max-width: 200px; */
-    /* border-radius: 10px;
-    height: 50vh; */ 
+    
     height: 30vh;
-    width: 100%; /* Use full width for the image */
-    /* max-width: 300px; Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    
+    height: auto; 
     border-radius: 10px;
 }
 
@@ -282,7 +279,7 @@ body {
 }
 
 .product-price {
-    /* margin-top: 10px; */
+    
     font-size: 30px;
     color:black;
     margin-right: 152px;
@@ -363,7 +360,7 @@ body {
     margin-right: 5px;
     cursor: pointer;
 }
-/* From Uiverse.io by elijahgummer */ 
+ 
 ul {
     position: relative;
     display: flex;
@@ -453,7 +450,7 @@ ul {
     transform: scale(1);
     transition-delay: 0.25s;
   }
-  /* From Uiverse.io by Df12345677 */ 
+  
 .button {
     height: 60px;
     width: 200px;
@@ -466,9 +463,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px; */
+    
     overflow: hidden;
-    /* margin: 20px 0 20px 0; */
+    
     margin: 27px 0 27px 0;
   }
   
@@ -530,79 +527,28 @@ ul {
     margin-top: 30px;
     background-color: black;
   }
-  /* From Uiverse.io by PriyanshuGupta28 */ 
-/* .rating-static {
-    display: inline-block;
-  }
-  
-  .rating-static input {
-    display: none;
-  }
-  
-  .rating-static label {
-    float: right;
-    cursor: pointer;
-    color: #ccc;
-   
-  }
-  .rating-static label:before {
-   content: '\2605';
-    font-size: 30px;
-    color: #F8DE22;
-   
-  }
-  .rating-blank {
-    display: inline-block;
-    transform: translate(-5px, 0px)
-  }
-  
-  .rating-blank input {
-    display: none;
-  }
-  
-  .rating-blank label {
-    float: right;
-    cursor: pointer;
-    color: #ccc;
-   
-  }
-  .rating-blank label:before {
-   content: '\2605';
-    font-size: 30px;
-    color: #777;
-    
-  } */
-  
-
-  
-  
-  
-  
-  
-  
-
   
   @media (max-width: 768px) {
     .product-container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        width: 90%; /* Take up more width on smaller screens */
+        flex-direction: column; 
+        width: 90%; 
     }
 
     .left-side {
-        border-bottom: none; /* Remove border on small screens */
-        padding-bottom: 0; /* Remove padding */
+        border-bottom: none; 
+        padding-bottom: 0; 
     }
 
     .product-name {
-        font-size: 20px; /* Adjust font size */
+        font-size: 20px; 
     }
 
     .product-price {
-        font-size: 16px; /* Adjust font size */
+        font-size: 16px; 
     }
 
     .product-description {
-        font-size: 14px; /* Adjust font size */
+        font-size: 14px; 
     }
 
     .qty-btn, .button {
@@ -653,7 +599,7 @@ ul {
     
    
 }
-/* From Uiverse.io by Yaya12085 */ 
+
 .card {
     display: flex;
     flex-direction: column;
